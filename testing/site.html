@@ -1,0 +1,313 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHub - Your Online Bookstore</title>
+    <link rel="stylesheet" href="site.css">
+    <script src="site.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <h1 class="logo">BookHub</h1>
+                <div class="search-container">
+                    <input type="text" id="findbookfield" placeholder="Search books..." class="search-input">
+                </div>
+                <button type="submit" id="findbooks">GO</button>
+            </div>
+            <div class="nav-right">
+                <div id="profile-dropdown" class="dropdown">
+                    <a href="login.html" id="signupchange" class="nav-link">Sign In</a>
+                    <div class="dropdown-content" id="profile-options" style="display: none;">
+                        <a href="#" id="logout">Logout</a>
+                    </div>
+                </div>
+                <i class='bx bxs-shopping-bag'></i>
+                <a href="cart.html" id="cartitemstotal" class="nav-link">Cart</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <!-- <hr class="nomargin" id="navbardivide"> -->
+
+    <nav class="categories-nav">
+        <div class="category-link">
+            <ul class="categories-list">
+                <li class="category-item">
+                    <a href="#" class="category-link">Fiction</a>
+                    <div class="dropdown-content">
+                        <a href="#">Literary Fiction</a>
+                        <a href="#">Mystery & Thriller</a>
+                        <a href="#">Science Fiction</a>
+                        <a href="#">Romance</a>
+                        <a href="#">Horror</a>
+                    </div>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Non-Fiction</a>
+                    <div class="dropdown-content">
+                        <a href="#">Biography</a>
+                        <a href="#">History</a>
+                        <a href="#">Self-Help</a>
+                        <a href="#">Business</a>
+                        <a href="#">Science</a>
+                    </div>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Children's</a>
+                    <div class="dropdown-content">
+                        <a href="#">Picture Books</a>
+                        <a href="#">Middle Grade</a>
+                        <a href="#">Young Adult</a>
+                        <a href="#">Educational</a>
+                    </div>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Academic</a>
+                    <div class="dropdown-content">
+                        <a href="#">Textbooks</a>
+                        <a href="#">Reference</a>
+                        <a href="#">Research Papers</a>
+                        <a href="#">Study Guides</a>
+                    </div>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Comics & Manga</a>
+                    <div class="dropdown-content">
+                        <a href="#">Graphic Novels</a>
+                        <a href="#">Superhero Comics</a>
+                        <a href="#">Manga</a>
+                        <a href="#">Comic Series</a>
+                    </div>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Poetry</a>
+                    <div class="dropdown-content">
+                        <a href="#">Classical Poetry</a>
+                        <a href="#">Modern Poetry</a>
+                        <a href="#">Anthologies</a>
+                        <a href="#">International Poetry</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <hr class="nomargin">
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h2 class="hero-title">Welcome to BookHub</h2>
+            <p class="hero-subtitle">Discover millions of eBooks, audiobooks, and more</p>
+            <h5 class="cta-button">Start Reading Today</h5>
+        </div>
+    </div>
+
+    <!-- Categories -->
+
+    <hr class="divider-line">
+
+    <!-- Featured Books -->
+    <div class="container-section">
+        <h3 class="section-title">Featured Books</h3>
+
+        <div class="books-grid">
+            <div class="book-card">
+                <img src="images/book1.jpg" alt="Book 1" class="book-image">
+                <h4 class="book-title">Solar Bones</h4>
+                <p class="book-author">Mike McCormak</p>
+                <p class="book-price">$19.99</p>
+                <button onclick="addToCart('B1')" class="add-to-cart-button">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="images/book2.jpeg" alt="Book 2" class="book-image">
+                <h4 class="book-title">Mystery Book</h4>
+                <p class="book-author">CJ LOUGHTY</p>
+                <p class="book-price">$24.99</p>
+                <button onclick="addToCart('B2')" class="add-to-cart-button">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="images/book3.jpeg" alt="Book 3" class="book-image">
+                <h4 class="book-title">The Selection</h4>
+                <p class="book-author">Kiera Cass</p>
+                <p class="book-price">$15.99</p>
+                <button onclick="addToCart('B3')" class="add-to-cart-button">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="images/ikigai.jpg" alt="Book 4" class="book-image">
+                <h4 class="book-title">Ikigai</h4>
+                <p class="book-author">HECTOR GARCIA</p>
+                <p class="book-price">$15.99</p>
+                <button onclick="addToCart('B4')" class="add-to-cart-button">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="images/book5.jpeg" alt="Book 5" class="book-image">
+                <h4 class="book-title">The Girl Who Dank The Moon</h4>
+                <p class="book-author">Kelly Barnhill</p>
+                <p class="book-price">$15.99</p>
+                <button onclick="addToCart('B5')" class="add-to-cart-button">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="images/excorcist.webp" alt="Book 6" class="book-image">
+                <h4 class="book-title">The Excorcist </h4>
+                <p class="book-author">William P Blatty</p>
+                <p class="book-price">$15.99</p>
+                <button onclick="addToCart('B6')" class="add-to-cart-button">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="images/onepiece.jpg" alt="Book 7" class="book-image">
+                <h4 class="book-title">One Piece</h4>
+                <p class="book-author">Oda</p>
+                <p class="book-price">$15.99</p>
+                <button onclick="addToCart('B7')" class="add-to-cart-button">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="images/harry.jpg" alt="Book 8" class="book-image">
+                <h4 class="book-title">Harry Potter</h4>
+                <p class="book-author">J. K. Rowling</p>
+                <p class="book-price">$15.99</p>
+                <button onclick="addToCart('B8')" class="add-to-cart-button">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="images/book9.jpg" alt="Book 9" class="book-image">
+                <h4 class="book-title">A Brief History of Time</h4>
+                <p class="book-author">Stephen Hawkings</p>
+                <p class="book-price">$15.99</p>
+                <button onclick="addToCart('B9')" class="add-to-cart-button">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="images/book10.jpg" alt="Book 10" class="book-image">
+                <h4 class="book-title">This Summer Will Be Different</h4>
+                <p class="book-author">Carley Fortune</p>
+                <p class="book-price">$15.99</p>
+                <button onclick="addToCart('B10')" class="add-to-cart-button">
+                    Add to Cart
+                </button>
+            </div>
+            <div class="book-card">
+                <img src="images/book11.jpeg" alt="Book 11" class="book-image">
+                <h4 class="book-title">The Neighbour Favour</h4>
+                <p class="book-author">ALyla Sage</p>
+                <p class="book-price">$15.99</p>
+                <button onclick="addToCart('B11')" class="add-to-cart-button">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <hr class="divider-line">
+
+    <!-- Deals Section -->
+    <!-- Deals Section -->
+    <div class="deals-section">
+        <div class="container">
+            <h3 class="section-title">Today's Deals</h3>
+            <div class="deals-grid">
+                <div class="deal-card">
+                    <img src="images/summer.avif" alt="Summer Book" class="deal-image">
+                    <div class="deal-content">
+                        <span class="deal-badge">Save 50%</span>
+                        <h4 class="deal-title">Summer Reading Sale</h4>
+                        <p class="deal-description">Get bestsellers at half price</p>
+                        <button class="shop-now-button">Shop Now</button>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <img src="images/book-bundle.webp" alt="Series Collection" class="deal-image">
+                    <div class="deal-content">
+                        <span class="deal-badge">Bundle & Save</span>
+                        <h4 class="deal-title">Series Collections</h4>
+                        <p class="deal-description">Buy complete series at 30% off</p>
+                        <button class="shop-now-button">Shop Now</button>
+                    </div>
+                </div>
+                <div class="deal-card">
+                    <img src="images/study-books.avif" alt="Series Collection" class="deal-image">
+                    <div class="deal-content">
+                        <span class="deal-badge">Make Your Academic Comeback</span>
+                        <h4 class="deal-title">Series Collections</h4>
+                        <p class="deal-description">Buy Latest Editions at 10% off</p>
+                        <button class="shop-now-button">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h5 class="footer-title">About Us</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About BookHub</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5 class="footer-title">Customer Service</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5 class="footer-title">Policy</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Settings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5 class="footer-title">Connect With Us</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BookHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
