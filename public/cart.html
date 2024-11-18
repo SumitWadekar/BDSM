@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHub - Your Online Bookstore</title>
+    <script src="Cart.js" defer></script>
+    <script type="module" src="app.js" defer></script> 
+    <link rel="stylesheet" href="cart.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <h1
+            class="logo"
+            style="
+              display: flex;
+              align-items: center;
+              font-weight: bold;
+              justify-content: center;
+            "
+          >
+            <span style="font-size: 4vh">BOOK</span
+            ><span
+              style="
+                font-size: 4vh;
+                background-color: black;
+                border-radius: 5px;
+                padding: 2px;
+                color: rgb(255, 255, 0);
+              "
+              >HUB</span
+            >
+          </h1>
+                <div class="search-container">
+                    <input type="text" placeholder="Search books..." class="search-input">
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="profile" id="profile_div">
+                    <i class='bx bx-user-circle'></i>
+                    <h3 id="profile">VALUE</h3>
+                </div>
+                <div id="home" class="home-class">
+                    <i class='bx bxs-home' ></i>
+                    <a href="site.html" class="nav-link">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <hr>
+
+    <nav class="categories-nav">
+        <div class="category-link">
+            <ul class="categories-list">
+                <li class="category-item">
+                    <a href="#" class="category-link">Fiction</a>
+                    <div class="dropdown-content">
+                        <a href="#">Literary Fiction</a>
+                        <a href="#">Mystery & Thriller</a>
+                        <a href="#">Science Fiction</a>
+                        <a href="#">Romance</a>
+                        <a href="#">Horror</a>
+                    </div>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Non-Fiction</a>
+                    <div class="dropdown-content">
+                        <a href="#">Biography</a>
+                        <a href="#">History</a>
+                        <a href="#">Self-Help</a>
+                        <a href="#">Business</a>
+                        <a href="#">Science</a>
+                    </div>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Children's</a>
+                    <div class="dropdown-content">
+                        <a href="#">Picture Books</a>
+                        <a href="#">Middle Grade</a>
+                        <a href="#">Young Adult</a>
+                        <a href="#">Educational</a>
+                    </div>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Academic</a>
+                    <div class="dropdown-content">
+                        <a href="#">Textbooks</a>
+                        <a href="#">Reference</a>
+                        <a href="#">Research Papers</a>
+                        <a href="#">Study Guides</a>
+                    </div>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Comics & Manga</a>
+                    <div class="dropdown-content">
+                        <a href="#">Graphic Novels</a>
+                        <a href="#">Superhero Comics</a>
+                        <a href="#">Manga</a>
+                        <a href="#">Comic Series</a>
+                    </div>
+                </li>
+                <li class="category-item">
+                    <a href="#" class="category-link">Poetry</a>
+                    <div class="dropdown-content">
+                        <a href="#">Classical Poetry</a>
+                        <a href="#">Modern Poetry</a>
+                        <a href="#">Anthologies</a>
+                        <a href="#">International Poetry</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <hr class="nomargin">
+
+    <div class="cart-container">
+        <!-- Cart Header -->
+        <div class="cart-header">
+            <h1>Your Shopping Cart</h1>
+            <span id="Total-items">3 item/s</span>
+        </div>
+
+        <!-- Cart Items Section -->
+        <div id="cart" class="cart-items">
+            <!-- Cart Item 1 -->
+            <div class="cart-item">
+                <img src="CSSes/images/Books/book2.jpeg" alt="Product Image">
+                <div class="cart-item-details">
+                    <div class="cart-item-title">The Myster of Darkhill School</div>
+                    <div class="cart-item-price">$29.99</div>
+                    <div class="cart-item-quantity">
+                        <label for="quantity1">Qty:</label>
+                        <input type="number" id="quantity1" min="1" max="10" value="1" class="quantity">
+                    </div>
+                    <div class="cart-item-remove">Remove</div>
+                </div>
+            </div>
+
+            <!-- Cart Item 2 -->
+            <div class="cart-item">
+                <img src="CSSes/images/Books/excorcist.webp" alt="Product Image">
+                <div class="cart-item-details">
+                    <div class="cart-item-title">Product Name 2</div>
+                    <div class="cart-item-price">$19.99</div>
+                    <div class="cart-item-quantity">
+                        <label for="quantity2">Qty:</label>
+                        <input type="number" id="quantity2" min="1" max="10" value="1" class="quantity">
+                    </div>
+                    <div class="cart-item-remove">Remove</div>
+                </div>
+            </div>
+
+            <!-- Cart Item 3 -->
+            <div class="cart-item">
+                <img src='CSSes/images/Books/book1.jpg' alt="Product Image">
+                <div class="cart-item-details">
+                    <div class="cart-item-title">Product Name 3</div>
+                    <div class="cart-item-price">$49.99</div>
+                    <div class="cart-item-quantity">
+                        <label for="quantity3">Qty:</label>
+                        <input type="number" id="quantity3" min="1" max="10" value="1" class="quantity">
+                    </div>
+                    <div class="cart-item-remove">Remove</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Section -->
+        <div class="cart-checkout">
+            <span id="Total-amount">₹00.00</span>
+            <button id="Checkout" class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
