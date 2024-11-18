@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - BookHub</title>
+    <link rel="stylesheet" href="transaction.css">
+    <script type="module" src="transaction.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo" style="
+              display: flex;
+              align-items: center;
+              font-weight: bold;
+              justify-content: center;
+            ">
+                <span style="font-size: 4vh">BOOK</span><span style="
+                font-size: 4vh;
+                background-color: black;
+                border-radius: 5px;
+                padding: 2px;
+                color: rgb(255, 255, 0);
+              ">HUB</span>
+            </h1>
+        </div>
+    </nav>
+
+    <div class="confirmation-container">
+        <div class="success-header">
+            <div class="success-icon">✓</div>
+            <h1>Order Confirmed!</h1>
+            <p>Thank you for shopping with BookHub</p>
+        </div>
+
+        <div class="order-details">
+            <div class="order-id">
+                <h3>Order ID: <span id="orderId"></span></h3>
+                <p>Order Date: <span id="orderDate"></span></p>
+            </div>
+
+            <div class="items-list" id="itemsList">
+                <!-- Items will be populated by JavaScript -->
+            </div>
+
+            <div class="total">
+                Total Amount: <span id="totalAmount">₹0.00</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button home-button" id="homie" onclick="window.location.href='site.html'">Back to
+                Home</button>
+            <button class="button print-button" onclick="window.print()">Print Receipt</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
